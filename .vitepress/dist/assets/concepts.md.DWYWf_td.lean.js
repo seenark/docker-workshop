@@ -1,0 +1,1 @@
+import{_ as e,c as r,o,a4 as a}from"./chunks/framework.BzdiqRf3.js";const g=JSON.parse('{"title":"Docker concepts","description":"","frontmatter":{},"headers":[],"relativePath":"concepts.md","filePath":"concepts.md"}'),t={name:"concepts.md"},c=a("",20),i=[c];function n(d,s,l,h,k,m){return o(),r("div",null,i)}const p=e(t,[["render",n]]);export{g as __pageData,p as default};

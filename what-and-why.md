@@ -15,11 +15,11 @@
 
 ### Bare metal
 
-![bare metal](./1.png)
+![bare metal](/1.png)
 
 ### Docker
 
-![using docker](./2.png)
+![using docker](/2.png)
 
 ::: info
 การที่เราจะ deploy app ด้วย docker เราก็ต้องสร้าง Dockerfile เพิ่มเข้ามา
@@ -28,7 +28,7 @@
 
 ### Kubernetes
 
-![k8s](./3.png)
+![k8s](/3.png)
 
 ## Portability
 

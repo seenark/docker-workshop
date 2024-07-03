@@ -2,6 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  ignoreDeadLinks: true,
   head: [
     // <link rel="stylesheet" href="https://unpkg.com/keyboard-css@1.2.4/dist/css/main.min.css" />
     [
@@ -37,8 +38,8 @@ export default defineConfig({
           { text: "14. Caddy reverse proxy", link: "/caddy" },
           { text: "15. Non-root user", link: "/non-root" },
           { text: "16. Docker prune", link: "/prune" },
-          // { text: "Markdown Examples", link: "/markdown-examples" },
-          // { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
     ],

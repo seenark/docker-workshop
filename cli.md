@@ -9,7 +9,8 @@
 [docker hub](https://hub.docker.com)
 
 ตัวอย่าง
-![nginx in dockerhub](./4.png)
+
+![nginx in dockerhub](/four.png)
 
 ใช้คำสั่งนี้
 
@@ -175,7 +176,7 @@ docker rm --force <Container Name | Container ID>
 
 เนื่องจากว่า container ก็เป็นเหมือน computer เครื่องหนึ่ง ถ้ามี service อะไรสักอย่างทำงานอยู่ แล้วเราอยากเข้าถึง ก็จะต้องเข้าถึงผ่าน port ซึ่ง port นั้นจะต้องเปิดอยู่ด้วย เช่น Nginx นั้นเปิด port 80 ให้เราเข้าถึงได้
 
-![exposing port](./5.png)
+![exposing port](/5.png)
 
 เราจะเปิด port ที่ container แล้วส่งข้อมูลมาที่เครื่อง host ผ่าน port ของเครื่อง host อีกที
 เรียกว่าการ binding port ด้วยคำสั่งนี้
@@ -190,7 +191,7 @@ docker run -d --name my-nginx -p 8080:80 nginx
 
 ลองเปิด browser ดูที่ port 8080
 
-![port 8080](./6.png)
+![port 8080](/6.png)
 
 ```
 CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                   NAMES

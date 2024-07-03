@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as i,a4 as n}from"./chunks/framework.BzdiqRf3.js";const E=JSON.parse('{"title":"Caddy","description":"","frontmatter":{},"headers":[],"relativePath":"caddy.md","filePath":"caddy.md"}'),e={name:"caddy.md"},t=n("",14),p=[t];function l(h,d,k,r,c,o){return i(),a("div",null,p)}const g=s(e,[["render",l]]);export{E as __pageData,g as default};

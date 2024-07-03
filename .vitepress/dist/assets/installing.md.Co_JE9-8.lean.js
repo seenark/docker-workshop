@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a,a4 as n}from"./chunks/framework.BzdiqRf3.js";const x=JSON.parse('{"title":"Installation","description":"","frontmatter":{},"headers":[],"relativePath":"installing.md","filePath":"installing.md"}'),r={name:"installing.md"},l=n("",4),d=[l];function i(s,o,c,h,g,_){return a(),e("div",null,d)}const f=t(r,[["render",i]]);export{x as __pageData,f as default};

@@ -158,7 +158,7 @@ serve({
 
 ลองใช้ hoppscotch ทำการ upload file เข้ามา
 
-![upload file](./10.png)
+![upload file](/ten.png)
 
 ดูที่ folder จะเห็นว่ามี file เพิ่มมาแล้ว
 
@@ -401,11 +401,11 @@ docker run -p 3333:3333 --name hono -d hono
 
 ก็ลอง upload file เล่นๆกันได้
 
-![upload file2](./11.png)
+![upload file2](/11.png)
 
 แล้วลองเปิดดูที่ http://localhost:3333/static/file-name
 
-![static file1](./12.png)
+![static file1](/12.png)
 
 ## Add one more route
 

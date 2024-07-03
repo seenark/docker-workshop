@@ -73,7 +73,7 @@ Port 5173 is in use, trying another one...
 
 หน้าเวปก็จะหน้าตาประมาณนี้
 
-![first react](./7.png)
+![first react](/7.png)
 
 ## build CSR React app
 
@@ -174,7 +174,7 @@ flat `-l <port>` จะใช้ port อะไรก็ใส่ไป
 
 ลองเปิด browser ดู
 
-![react on port 3001](./9.png)
+![react on port 3001](/9.png)
 
 ## Dockerfile
 
@@ -210,7 +210,7 @@ flat `-l <port>` จะใช้ port อะไรก็ใส่ไป
 
 - `FROM <image name>` คือชื่อ image ที่อยู่ใน [dockerhub](https://hub.docker.com/) สำหรับ bun คือ `oven/bun`
 
-![bun in dockerhub](./8.png)
+![bun in dockerhub](/8.png)
 
 - `WORKDIR /app` คือสร้าง folder ที่เราจะทำงานหลังจากนี้ไป เพื่อที่จะได้มี folder สำหรับ React โดยเฉพาะ ไม่ไปปนกับ OS folder อื่นๆ
 - `COPY <source> <destination>` คือสำหรับ copy file จาก source ไป destination
