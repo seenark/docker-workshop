@@ -1,0 +1,4 @@
+node_modules
+.direnv
+docs/.vitepress/dist
+.vitepress/cache
