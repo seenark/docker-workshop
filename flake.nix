@@ -1,5 +1,5 @@
 {
-  description = "Bun project";
+  description = "Nodejs project";
 
   # Flake inputs
   inputs = {
@@ -29,12 +29,13 @@
       devShells = forAllSystems ({ pkgs, pkgs-unstable }: {
         default = pkgs.mkShell {
           # The Nix packages provided in the environment
-          packages = with pkgs-unstable; [
-            bun
+          packages = with pkgs; [
+            pkgs.nodejs_22
+            pkgs.corepack_22
           ];
 
           shellHook = ''
-            echo "🍞🍞🍞 Welcome to a  Nix development environment for Bun!         󰈸  🍞🍞🍞"
+            echo "🔥🔥🔥 Welcome to a  Nix development environment for Nodejs! v.22 󰎙        󰈸 🌟🌟🌟"
           '';
         };
       });
