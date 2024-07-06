@@ -36,7 +36,10 @@ export default defineConfig({
           { text: "09. Hands-on SSR Next", link: "/hands-on-next" },
           { text: "10. Networks", link: "/network" },
           { text: "11. Docker compose", link: "/docker-compose" },
-          { text: "12. Restart policy", link: "/restart-policy" },
+          {
+            text: "12. Restart policy & Health check",
+            link: "/restart-policy",
+          },
           { text: "13. Postgres example", link: "/postgres-example" },
           { text: "14. Portainer", link: "/portainer" },
           { text: "15. Caddy reverse proxy", link: "/caddy" },

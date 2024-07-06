@@ -1,5 +1,7 @@
 # Docker compose restart policy
 
+## Restart policy
+
 ใน docker compose services หาก service ตายไป เราสามารถให้ docker restart ตัวเองกลับมาได้ด้วย
 
 ```yaml
@@ -37,5 +39,57 @@ services:
 
 - `no` คือไม่ต้อง restart
 - `always` จะ restart เสมอ จนกว่ามันจะถูกลบออกไป
-- `on-failure[:max number of retries]` จะ restart เมื่อ container error ระบุจำนวนได้ด้วย
+- `on-failure[:max number of retries]` จะ restart เมื่อ container ตาย ระบุจำนวนการ restart ได้ด้วย
 - `unless-stopped` จะ restart เมื่อ container ตาย แต่ถ้าเรา stop ไว้ มันจะไม่ restart กลับมาเองนะ
+
+## Health check
+
+จากการที่เราใส่ restart policy เข้าไปนั้น มันจะ restart ก็ต่อเมื่อ container มันตายไป หรือได้ exit code มา
+
+การใส่ Health check คือการที่เราบอก docker ถึงวิธีการที่จะทำให้ docker รู้ว่า container เรายังทำงานอยู่ดีไหม
+เมื่อ health check failed ก็จะไป restart container ไปตาม restart policy ที่ตั้งไว้
+
+เราสามารถใส่ Health check แบบนี้
+
+```yaml
+networks:
+  my_bridge2:
+    external: true
+    name: my_bridge1
+
+services:
+  next:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3001:3000
+    restart: unless-stopped
+    healthcheck: # [!code ++]
+      test: ["CMD-SHELL", "curl -f http://localhost:3000 || exit 1"] # [!code ++]
+      interval: 1m30s # [!code ++]
+      timeout: 10s # [!code ++]
+      retries: 3 # [!code ++]
+      start_period: 40s # [!code ++]
+    networks:
+      - my_bridge2
+  backend:
+    container_name: hono
+    image: hono
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3333:3333
+    volumes:
+      - ./uploads:/app/uploads
+    restart: unless-stopped # [!code ++]
+    healthcheck: # [!code ++]
+      test: ["CMD-SHELL", "curl -f http://localhost:3333/healthz || exit 1"] # [!code ++]
+      interval: 1m30s # [!code ++]
+      timeout: 10s # [!code ++]
+      retries: 3 # [!code ++]
+      start_period: 40s # [!code ++]
+    networks:
+      - my_bridge2
+```
