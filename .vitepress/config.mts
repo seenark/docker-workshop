@@ -26,8 +26,8 @@ export default defineConfig({
         text: "Workshop",
         items: [
           { text: "01. Installation", link: "/installing" },
-          { text: "02. Knowing Docker Concepts", link: "/concepts" },
-          { text: "03. What & Why", link: "/what-and-why" },
+          { text: "02. What & Why", link: "/what-and-why" },
+          { text: "03. Knowing Docker Concepts", link: "/concepts" },
           { text: "04. Docker basic commands", link: "/cli" },
           { text: "05. Hands-on React + Vite + TS", link: "/hands-on-react" },
           { text: "06. Multi-stage", link: "/multi-stage" },

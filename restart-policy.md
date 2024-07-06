@@ -68,10 +68,10 @@ services:
     restart: unless-stopped
     healthcheck: # [!code ++]
       test: ["CMD-SHELL", "curl -f http://localhost:3000 || exit 1"] # [!code ++]
-      interval: 1m30s # [!code ++]
+      interval: 1m # [!code ++]
       timeout: 10s # [!code ++]
       retries: 3 # [!code ++]
-      start_period: 40s # [!code ++]
+      start_period: 0s # [!code ++]
     networks:
       - my_bridge2
   backend:
@@ -86,10 +86,18 @@ services:
     restart: unless-stopped # [!code ++]
     healthcheck: # [!code ++]
       test: ["CMD-SHELL", "curl -f http://localhost:3333/healthz || exit 1"] # [!code ++]
-      interval: 1m30s # [!code ++]
+      interval: 1m # [!code ++]
       timeout: 10s # [!code ++]
       retries: 3 # [!code ++]
-      start_period: 40s # [!code ++]
+      start_period: 20s # [!code ++]
     networks:
       - my_bridge2
 ```
+
+จะเห็นว่าเราใช้ curl ในการ check container health
+
+ฉนั้นเราต้องใส่ curl package ลงไปใน container ด้วย
+
+ยกตัวอย่างส่วนของ backend ละกัน
+
+<<<@/snippets/hono/v4/Dockerfile
