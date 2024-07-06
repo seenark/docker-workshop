@@ -5,7 +5,6 @@ export default defineConfig({
   ignoreDeadLinks: true,
   base: "/docker-workshop/",
   head: [
-    // <link rel="stylesheet" href="https://unpkg.com/keyboard-css@1.2.4/dist/css/main.min.css" />
     [
       "link",
       {
@@ -18,7 +17,10 @@ export default defineConfig({
   description: "Workshop details ",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: "Home", link: "/" }],
+    nav: [
+      { text: "Home", link: "/" },
+      { text: "Get Started", link: "/installing" },
+    ],
     sidebar: [
       {
         text: "Workshop",
@@ -34,17 +36,20 @@ export default defineConfig({
           { text: "09. Hands-on SSR Next", link: "/hands-on-next" },
           { text: "10. Networks", link: "/network" },
           { text: "11. Docker compose", link: "/docker-compose" },
-          { text: "12. Postgres example", link: "/postgres-example" },
-          { text: "13. Portainer", link: "/portainer" },
-          { text: "14. Caddy reverse proxy", link: "/caddy" },
-          { text: "15. Non-root user", link: "/non-root" },
-          { text: "16. Docker prune", link: "/prune" },
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "12. Restart policy", link: "/restart-policy" },
+          { text: "13. Postgres example", link: "/postgres-example" },
+          { text: "14. Portainer", link: "/portainer" },
+          { text: "15. Caddy reverse proxy", link: "/caddy" },
+          { text: "16. Non-root user", link: "/non-root" },
+          { text: "17. Docker prune", link: "/prune" },
+          // { text: "Markdown Examples", link: "/markdown-examples" },
+          // { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/seenark" }],
+    socialLinks: [
+      { icon: "github", link: "https://github.com/seenark/docker-workshop" },
+    ],
     search: {
       provider: "local",
     },
