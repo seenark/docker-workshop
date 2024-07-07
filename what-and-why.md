@@ -15,11 +15,44 @@
 
 ### Bare metal
 
-![bare metal](/1.png)
+ถ้าเราจะติดตั้ง NodeJS web server ในเครื่อง computer เปล่าๆเลย หลายคนก็น่าจะเคยใช้วิธีนี้
+
+เริ่มที่เรามี computer Ubuntu สักตัวนึง
+<br>
+แล้วเราก็ติดตั้ง NodeJS runtime ลงไป
+
+![20](/20.gif)
+
+จากนั้นก็โหลด source code เข้ามา
+
+![21](/21.gif)
+
+แล้วก็สั่ง build เราจะได้ files ที่พร้อมสำหรับ website ของเรา
+
+![22](/22.gif)
+
+จากนั้นก็สั่ง run files ที่ได้จากการ build
+ก็จะมี process ที่ทำงานอยู่เบื้องหลังเพื่อรองรับการทำงานของ website
+
+![23](/23.gif)
+
+ถ้ามี Backend หรือ database ก็ทำลักษณะเดียวกัน
+<br>
+โหลด source code -> build -> run
+<br>
+ถ้าเป็น mysql ก็โหลดตัว installer แล้วก็ติดตั้ง จะได้ process ของ mysql ทำงานอยู่เบื้องหลัง
+
+![24](/24.gif)
+
+จากนั้นก็อนุญาตให้ติดต่อกับ internet ภายนอก
+
+![25](/25.gif)
 
 ### Docker
 
-![using docker](/2.png)
+พอเป็น docker ก็จะเป็น ภาพนี้
+
+![26](/26.gif)
 
 ::: info
 การที่เราจะ deploy app ด้วย docker เราก็ต้องสร้าง Dockerfile เพิ่มเข้ามา

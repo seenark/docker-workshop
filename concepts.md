@@ -2,6 +2,8 @@
 
 มาดู concepts ของ Docker กันก่อน
 
+![27](/27.gif)
+
 ## Docker architecture
 
 ![docker architecure diagram](https://docs.docker.com/guides/images/docker-architecture.webp)
