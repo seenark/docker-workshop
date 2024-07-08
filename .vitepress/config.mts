@@ -45,6 +45,7 @@ export default defineConfig({
           { text: "15. Caddy reverse proxy", link: "/caddy" },
           { text: "16. Non-root user", link: "/non-root" },
           { text: "17. Docker prune", link: "/prune" },
+          { text: "18. Feedback", link: "/feedback" },
           // { text: "Markdown Examples", link: "/markdown-examples" },
           // { text: "Runtime API Examples", link: "/api-examples" },
         ],
